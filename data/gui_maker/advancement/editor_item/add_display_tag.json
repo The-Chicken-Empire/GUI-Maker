@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement":{
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:item_frame",
+          "predicates": {
+            "minecraft:custom_data": {
+              "gui_maker": {
+                "editor_item": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gui_maker:editor_item/add_display_tag"
+  }
+}

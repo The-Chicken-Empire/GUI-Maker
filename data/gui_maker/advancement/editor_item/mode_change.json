@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement":{
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:redstone_torch",
+          "predicates": {
+            "minecraft:custom_data": {
+              "gui_maker": {
+                "editor_item": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gui_maker:editor_item/mode_change"
+  }
+}

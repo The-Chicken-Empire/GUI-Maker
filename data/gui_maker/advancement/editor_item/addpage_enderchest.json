@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement":{
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:ender_chest",
+          "predicates": {
+            "minecraft:custom_data": {
+              "gui_maker": {
+                "editor_item": 3
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gui_maker:editor_item/addpage_enderchest"
+  }
+}

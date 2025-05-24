@@ -1,0 +1,71 @@
+{
+  "criteria": {
+    "set_trigger_function": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": "minecraft:written_book",
+              "predicates": {
+                "minecraft:custom_data": {
+                  "gui_maker": {
+                    "editor_item": 4
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "set_sound_function": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": "minecraft:written_book",
+              "predicates": {
+                "minecraft:custom_data": {
+                  "gui_maker": {
+                    "editor_item": 5
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "set_pagetag": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": "minecraft:written_book",
+              "predicates": {
+                "minecraft:custom_data": {
+                  "gui_maker": {
+                    "editor_item": 6
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "set_trigger_function",
+      "set_sound_function",
+      "set_pagetag"
+    ]
+  ],
+  "rewards": {
+    "function": "gui_maker:editor_item/written_book"
+  }
+}
