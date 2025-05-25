@@ -14,7 +14,7 @@ jobs:
     name: Repository Dispatch
     runs-on: ubuntu-latest
     steps:
-      - name: dispatch
+      - name: Execute dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.ORG_PAT }}
