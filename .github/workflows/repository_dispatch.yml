@@ -1,0 +1,23 @@
+name: repository-dispatch
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+jobs:
+  dispatch:
+    strategy:
+      matrix:
+        repo: ["The-Chicken-Empire/fatal-pvp"]
+    name: Repository Dispatch
+    runs-on: ubuntu-latest
+    steps:
+      - name: dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.ORG_PAT }}
+          repository: ${{ matrix.repo }}
+          event-type: update
+          client-payload: '{"repo":"${{ github.repository }}", "branch":"main", "sha":"${{ github.sha }}"}'
