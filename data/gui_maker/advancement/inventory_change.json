@@ -3,8 +3,5 @@
         "requirement": {
             "trigger": "minecraft:inventory_changed"
         }
-    },
-    "rewards": {
-        "function": "gui_maker:system/inventory_change"
     }
 }
