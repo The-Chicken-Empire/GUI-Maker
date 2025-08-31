@@ -7,8 +7,6 @@
 # @user
 # @private
 
-say a
-
 # ページデータを設定
 execute if data storage gui_maker: input.addpage_enderchest.Items run data modify storage gui_maker: tmp.general/addpage_enderchest.newpage.Items set from storage gui_maker: input.addpage_enderchest.Items
 
