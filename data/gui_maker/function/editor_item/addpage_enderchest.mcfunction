@@ -12,5 +12,8 @@ advancement revoke @s only gui_maker:editor_item/addpage_enderchest
 execute unless block ~ ~ ~ chest run tellraw @s {"color":"red","italic":false,"text":"チェストの上に立って実行してください！"}
 execute unless block ~ ~ ~ chest run return -1
 
+data modify storage gui_maker: input.addpage_enderchest.Items set from block ~ ~ ~ Items
+data modify storage gui_maker: input.addpage_enderchest.showresult set value 1b
+
 # ページ追加
-function gui_maker:general/addpage_enderchest with block ~ ~ ~
+function gui_maker:general/addpage_enderchest with storage input.addpage_enderchest

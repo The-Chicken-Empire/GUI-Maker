@@ -21,4 +21,4 @@ scoreboard objectives add gui_maker dummy
 
 forceload add 0 0
 
-execute unless data storage gui_maker: {} run function gui_maker:init
+execute unless data storage gui_maker: pages run function gui_maker:init

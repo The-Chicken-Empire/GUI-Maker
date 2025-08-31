@@ -3,7 +3,7 @@
 # @within gui_maker:general/addpage_enderchest/
 
 # {tag : Page<ページ番号>}
-$data modify storage gui_maker: tmp.general/addpage_enderchest.newpage.tag set value Page$(id)
+$data modify storage gui_maker: tmp.general/addpage_enderchest.newpage.tag set value Page$(nextpage)
 
 # 画面更新の際にアイテムを設定していない位置に既に入っているアイテムを消すか
 data modify storage gui_maker: tmp.general/addpage_enderchest.newpage.delete_items set value 1b
